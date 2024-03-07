@@ -43,10 +43,10 @@ public class Exercises2 {
                 else
                     answer++;
             }
-            if (s.charAt(i) == 'V') {
+            else if (s.charAt(i) == 'V') {
                 answer += 5;
             }
-            if (s.charAt(i) == 'X') {
+            else if (s.charAt(i) == 'X') {
                 if (i < size - 1) {
                     if (s.charAt(i + 1) == 'L') {
                         answer += 40;
@@ -62,10 +62,10 @@ public class Exercises2 {
                 else
                     answer += 10;
             }
-            if (s.charAt(i) == 'L') {
+            else if (s.charAt(i) == 'L') {
                 answer += 50;
             }
-            if (s.charAt(i) == 'C') {
+            else if (s.charAt(i) == 'C') {
                 if (i < size - 1) {
                     if (s.charAt(i + 1) == 'D') {
                         answer += 400;
@@ -81,10 +81,10 @@ public class Exercises2 {
                 else
                     answer += 100;
             }
-            if (s.charAt(i) == 'D') {
+            else if (s.charAt(i) == 'D') {
                 answer += 500;
             }
-            if (s.charAt(i) == 'M') {
+            else if (s.charAt(i) == 'M') {
                 answer += 1000;
             }
         }
@@ -116,6 +116,6 @@ public class Exercises2 {
     }
 
     public static void main(String[] args) {
-        // test me here
+        // test me here.
     }
 }

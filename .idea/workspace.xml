@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b36862d-65cb-41c1-96c8-7e15b34ce156" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Exercises2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Exercises2.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,6 +36,7 @@
   "keyToString": {
     "Application.Exercises2.executor": "Run",
     "JUnit.Test3.executor": "Run",
+    "Maven.Second-Assignment-Algorithms [test].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
@@ -42,7 +45,7 @@
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.Test3">
+  <component name="RunManager" selected="Application.Exercises2">
     <configuration name="Exercises2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Exercises2" />
       <module name="Second-Assignment-Algorithms" />
@@ -79,10 +82,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Exercises2" />
         <item itemvalue="JUnit.Test3" />
         <item itemvalue="JUnit.Test1" />
         <item itemvalue="JUnit.Test2" />
-        <item itemvalue="Application.Exercises2" />
       </list>
     </recent_temporary>
   </component>
