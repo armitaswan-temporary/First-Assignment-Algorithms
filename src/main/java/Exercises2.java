@@ -4,66 +4,118 @@ import java.util.List;
 import java.util.Map;
 
 public class Exercises2 {
-
-    /*
-    Given an array of integers nums and an integer target, return indices of the two numbers
-    such that they add up to target.
-
-    You may assume that each input would have exactly one solution, and you may not use the same element twice.
-    You can return the answer in any order.
-    */
-
     public int[] twoSum(int[] nums, int target) {
-        // TODO
-        return null;
+        int size = nums.length;
+        int[] answer = new int[2];
+        boolean con = true;
+        for (int i = 0; i < size; i++) {
+            for (int j = i + 1; j < size; j++) {
+                if (nums[i] + nums[j] == target) {
+                    answer[0] = i;
+                    answer[1] = j;
+                    con = false;
+                    break;
+                }
+            }
+            if (!con)
+                break;
+        }
+        return answer;
     }
-
-    /*
-    Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
-
-    Symbol       Value
-    I             1
-    V             5
-    X             10
-    L             50
-    C             100
-    D             500
-    M             1000
-
-    For example, 2 is written as II in Roman numeral, just two ones added together.
-    12 is written as XII, which is simply X + II.
-    The number 27 is written as XXVII, which is XX + V + II.
-
-    Roman numerals are usually written largest to smallest from left to right.
-    However, the numeral for four is not IIII.
-    Instead, the number four is written as IV.
-    Because the one is before the five we subtract it making four.
-    The same principle applies to the number nine, which is written as IX.
-    There are six instances where subtraction is used:
-
-    I can be placed before V (5) and X (10) to make 4 and 9.
-    X can be placed before L (50) and C (100) to make 40 and 90.
-    C can be placed before D (500) and M (1000) to make 400 and 900.
-
-    Given a roman numeral, convert it to an integer.
-    */
 
     public int romanToInt(String s) {
-        // TODO
-        return 0;
+        int answer = 0;
+        int size = s.length();
+        for (int i = 0; i < size; i++) {
+            if (s.charAt(i) == 'I') {
+                if (i < size - 1) {
+                    if (s.charAt(i + 1) == 'V') {
+                        answer += 4;
+                        i++;
+                    }
+                    else if (s.charAt(i + 1) == 'X') {
+                        answer += 9;
+                        i++;
+                    }
+                    else
+                        answer++;
+                }
+                else
+                    answer++;
+            }
+            if (s.charAt(i) == 'V') {
+                answer += 5;
+            }
+            if (s.charAt(i) == 'X') {
+                if (i < size - 1) {
+                    if (s.charAt(i + 1) == 'L') {
+                        answer += 40;
+                        i++;
+                    }
+                    else if (s.charAt(i + 1) == 'C') {
+                        answer += 90;
+                        i++;
+                    }
+                    else
+                        answer += 10;
+                }
+                else
+                    answer += 10;
+            }
+            if (s.charAt(i) == 'L') {
+                answer += 50;
+            }
+            if (s.charAt(i) == 'C') {
+                if (i < size - 1) {
+                    if (s.charAt(i + 1) == 'D') {
+                        answer += 400;
+                        i++;
+                    }
+                    else if (s.charAt(i + 1) == 'M') {
+                        answer += 900;
+                        i++;
+                    }
+                    else
+                        answer += 100;
+                }
+                else
+                    answer += 100;
+            }
+            if (s.charAt(i) == 'D') {
+                answer += 500;
+            }
+            if (s.charAt(i) == 'M') {
+                answer += 1000;
+            }
+        }
+        return answer;
     }
 
-    /*
-    Given an array nums of distinct integers, return all the possible permutations.
-    You can return the answer in any order.
-    */
-
     public List<List<Integer>> permute(int[] nums) {
-        // TODO
-        return null;
+        List<List<Integer>> answer = new ArrayList<>();
+        int size = nums.length;
+        if (size == 1) {
+            List<Integer> thePermutations = new ArrayList<>();
+            thePermutations.add(nums[0]);
+            answer.add(thePermutations);
+            return answer;
+        }
+        int[] newNums = new int[size - 1];
+        for (int i = 0; i < size - 1; i++) {
+            newNums[i] = nums[i];
+        }
+        List<List<Integer>> alterAnswer = permute(newNums);
+        for (List<Integer> list : alterAnswer) {
+            for (int i = 0; i <= list.size(); i++) {
+                List<Integer> ans = new ArrayList<>(list);
+                ans.add(i, nums[nums.length - 1]);
+                answer.add(ans);
+            }
+        }
+        return answer;
     }
 
     public static void main(String[] args) {
-        // test your code here!
+        // test me here.
     }
 }
